@@ -36,10 +36,10 @@ export default function Home() {
             <span>Available for Work</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">John Doe</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Michael Dias</span>
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
-            A passionate Software Engineer dedicated to building stunning, high-performance web applications. I craft digital experiences that are both functionally robust and visually beautiful.
+            Hands-on maker and computer science graduate with strong experience in embedded systems, rapid prototyping, and problem-driven engineering. Comfortable designing in CAD, programming microcontrollers, soldering electronics, and iterating physical systems from concept to functional hardware. Thrives in resource-constrained, build-it-yourself environments.
           </p>
         </div>
       </motion.header>
@@ -66,11 +66,11 @@ export default function Home() {
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface/50 p-5 rounded-2xl border border-white/5 transition duration-300 hover:bg-surface hover:shadow-lg">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-bold text-white text-lg">Senior Developer</h3>
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md">2022 - Present</span>
+                    <h3 className="font-bold text-white text-lg">Indoor Localization App</h3>
+                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md">Feb - Aug 2024</span>
                   </div>
-                  <div className="text-slate-400 text-sm mb-3">Tech Nova Inc.</div>
-                  <p className="text-sm text-slate-500">Led the front-end team to build robust React applications. Improved performance by 40% and mentored junior developers.</p>
+                  <div className="text-slate-400 text-sm mb-3">Startup</div>
+                  <p className="text-sm text-slate-500">Developed a mobile app combining GPS, pedometer, and Bluetooth beacons. Built a Python (Flask) backend and implemented an Extended Kalman Filter for sensor fusion.</p>
                 </div>
               </div>
 
@@ -81,11 +81,11 @@ export default function Home() {
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface/50 p-5 rounded-2xl border border-white/5 transition duration-300 hover:bg-surface hover:shadow-lg">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-bold text-white text-lg">Web Developer</h3>
-                    <span className="text-xs font-medium text-slate-400 bg-slate-800 px-2 py-1 rounded-md">2019 - 2022</span>
+                    <h3 className="font-bold text-white text-lg">Warehouse Logistics</h3>
+                    <span className="text-xs font-medium text-slate-400 bg-slate-800 px-2 py-1 rounded-md">2021 - Present</span>
                   </div>
-                  <div className="text-slate-400 text-sm mb-3">Creative Solutions</div>
-                  <p className="text-sm text-slate-500">Developed responsive web applications for various clients. Integrated continuous deployment pipelines.</p>
+                  <div className="text-slate-400 text-sm mb-3">The Beer Store - Part Time</div>
+                  <p className="text-sm text-slate-500">Operated electric ride-on pallet jacks in a safety-critical environment. Planned pallet builds and truck loading for efficient deliveries.</p>
                 </div>
               </div>
 
@@ -103,12 +103,12 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-center p-4 rounded-2xl bg-surface/50 border border-white/5">
                 <div>
-                  <h3 className="text-lg font-bold text-white">Bachelor of Computer Science</h3>
-                  <p className="text-slate-400 text-sm">University of Technology</p>
+                  <h3 className="text-lg font-bold text-white">B.Sc. Computer Science</h3>
+                  <p className="text-slate-400 text-sm">Western University</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm font-bold text-white">2015 - 2019</div>
-                  <div className="text-xs text-slate-500">Graduated with Honors</div>
+                  <div className="text-sm font-bold text-white">2019 - 2023</div>
+                  <div className="text-xs text-slate-500">Dean's Honor List</div>
                 </div>
               </div>
             </div>
@@ -139,6 +139,21 @@ export default function Home() {
             </div>
           </motion.div>
 
+          <motion.section variants={fadeIn} className="bg-surface/30 p-8 rounded-3xl border border-white/5">
+            <h2 className="text-2xl font-bold text-white mb-4">Contact</h2>
+            <div className="flex flex-col gap-3 text-slate-400 text-sm">
+              <div className="flex items-center gap-3">
+                <span>📧</span> <a href="mailto:diasm0301@gmail.com" className="hover:text-primary transition-colors">diasm0301@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span>☎️</span> <span>226-977-4245</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span>📍</span> <span>191 Edgehill Crescent, London, ON</span>
+              </div>
+            </div>
+          </motion.section>
+
           <motion.section variants={fadeIn} className="bg-surface/30 p-8 rounded-3xl border border-white/5 flex-grow">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400">
@@ -147,12 +162,23 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-white">Skills</h2>
             </div>
 
-            <div className="flex flex-wrap gap-2">
-              {['JavaScript', 'React', 'Node.js', 'Tailwind CSS', 'Next.js', 'TypeScript', 'Framer Motion', 'Git', 'HTML/CSS', 'Python'].map((skill) => (
-                <span key={skill} className="px-3 py-1.5 rounded-lg bg-surface border border-white/5 text-slate-300 text-sm font-medium hover:bg-white/10 hover:text-white transition-colors cursor-default">
-                  {skill}
-                </span>
-              ))}
+            <div className="flex flex-col gap-4">
+              <div>
+                <h3 className="text-white text-sm font-semibold mb-2">Hardware</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Sensors', 'I²C/UART/PWM', 'Soldering', 'Crimping', 'FreeCAD', '3D Printing'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-white text-sm font-semibold mb-2">Software</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['Python', 'C/C++', 'CMake', 'ESP32', 'FreeRTOS', 'SQL', 'JS'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.section>
 

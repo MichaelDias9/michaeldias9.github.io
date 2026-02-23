@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="font-bold text-xl tracking-tight text-white flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-sm font-black">
-            JD
+            MD
           </div>
           <span>Portfolio</span>
         </div>

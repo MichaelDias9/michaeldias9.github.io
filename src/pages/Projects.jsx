@@ -19,31 +19,27 @@ const staggerContainer = {
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-scale e-commerce solution built with React and Node.js. Features include user authentication, payment processing, and a robust admin dashboard.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "IMU Sensor Fusion",
+    description: "Developed a 9-DOF complementary filter with quaternions in C++ for real-time attitude estimation and visualization using a RayLib front end. Wrote C device drivers and integrated third-party libraries using CMake.",
+    tech: ["C++", "C", "CMake", "RayLib"],
     hasVideo: true,
+    github: "https://github.com/MichaelDias9/IMU-Sensor-Fusion"
   },
   {
     id: 2,
-    title: "AI Video Generator",
-    description: "An application that leverages machine learning models to generate short promotional videos from text descriptions. Built with Next.js and Python.",
-    tech: ["Next.js", "Python", "FastAPI", "Tailwind CSS"],
+    title: "3D Printer Exhaust Venting",
+    description: "Designed and 3D printed a modular exhaust and ducting system. Modeled components in FreeCAD to optimize airflow paths and fitment tolerances. Iterated through multiple print/test cycles.",
+    tech: ["FreeCAD", "3D Printing", "Rapid Prototyping"],
     hasVideo: false,
+    github: "#"
   },
   {
     id: 3,
-    title: "Real-time Chat Application",
-    description: "A lightweight, fast, and secure real-time chatting app wrapper. Supports group chats, file sharing, and end-to-end encryption.",
-    tech: ["TypeScript", "Socket.io", "Express", "Redux"],
+    title: "FPV Drone Build",
+    description: "Selected and matched motor KV, 5” propellers, ESC ratings, and 4S LiPo. Soldered high-current power systems and integrated the flight controller. Configured Betaflight firmware and performed PID tuning.",
+    tech: ["Electronics", "Soldering", "Betaflight", "PID Tuning"],
     hasVideo: true,
-  },
-  {
-    id: 4,
-    title: "Portfolio Template",
-    description: "A highly customizable and responsive portfolio template designed for software engineers. Uses Framer Motion for premium feel.",
-    tech: ["React", "Vite", "Framer Motion", "Tailwind"],
-    hasVideo: false,
+    github: "#"
   }
 ];
 
@@ -101,12 +97,14 @@ export default function Projects() {
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h2>
                 <div className="flex gap-2">
-                  <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 text-slate-300 transition-colors" title="View Source">
+                  <a href={project.github} className="p-2 bg-white/5 rounded-full hover:bg-white/10 text-slate-300 transition-colors" title="View Source">
                     <Github size={18} />
                   </a>
-                  <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 text-slate-300 transition-colors" title="Live Demo">
-                    <ExternalLink size={18} />
-                  </a>
+                  {project.hasVideo && (
+                    <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 text-slate-300 transition-colors" title="Live Demo">
+                      <ExternalLink size={18} />
+                    </a>
+                  )}
                 </div>
               </div>
 
