@@ -1,0 +1,15 @@
+
+> my-website@0.0.0 build
+> vite build
+
+You are using Node.js 18.18.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.
+failed to load config from C:\Users\diasm\OneDrive\Desktop\MY WEBSITE\vite.config.js
+error during build:
+Error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+    at Object.<anonymous> (C:\Users\diasm\OneDrive\Desktop\MY WEBSITE\node_modules\@tailwindcss\oxide\index.js:559:11)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:169:29)
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
