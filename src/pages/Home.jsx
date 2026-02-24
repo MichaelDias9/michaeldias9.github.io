@@ -164,9 +164,8 @@ export default function Home() {
 
             <div className="flex flex-col gap-4">
               <div>
-                <h3 className="text-white text-sm font-semibold mb-2">Hardware</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Sensors', 'I²C/UART/PWM', 'Soldering', 'Crimping', 'FreeCAD', '3D Printing'].map((skill) => (
+                  {['Knowledge of electrical circuits and schematics', 'Debugging with Multimeter', 'Use of rotary tools, drills, saws, crimpers, etc.'].map((skill) => (
                     <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
                   ))}
                 </div>
@@ -174,7 +173,23 @@ export default function Home() {
               <div>
                 <h3 className="text-white text-sm font-semibold mb-2">Software</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'C/C++', 'CMake', 'ESP32', 'FreeRTOS', 'SQL', 'JS'].map((skill) => (
+                  {['Python', 'C/C++', 'CMake', 'SQL', 'ESP32', 'Concurrency', 'RTOS,', 'Windows', 'Linux', 'Mac'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-white text-sm font-semibold mb-2">Hardware</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['IMU Sensors', 'I²C', 'UART', 'PWM', 'Motors', 'Soldering'].map((skill) => (
+                    <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-white text-sm font-semibold mb-2">Design</h3>
+                <div className="flex flex-wrap gap-2">
+                  {['FreeCAD', 'Parametric Design', '3D Printing - PLA, PETG', 'OrcaSlicer', 'Functional Prototyping'].map((skill) => (
                     <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
                   ))}
                 </div>
