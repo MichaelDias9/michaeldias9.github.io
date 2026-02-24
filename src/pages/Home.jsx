@@ -149,7 +149,7 @@ export default function Home() {
                 <span>☎️</span> <span>226-977-4245</span>
               </div>
               <div className="flex items-center gap-3">
-                <span>📍</span> <span>191 Edgehill Crescent, London, ON</span>
+                <span>📍</span> <span>Edgehill Crescent, London, ON</span>
               </div>
             </div>
           </motion.section>
@@ -164,8 +164,9 @@ export default function Home() {
 
             <div className="flex flex-col gap-4">
               <div>
+                <h3 className="text-white text-sm font-semibold mb-2">Physical</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Knowledge of electrical circuits and schematics', 'Debugging with Multimeter', 'Use of rotary tools, drills, saws, crimpers, etc.'].map((skill) => (
+                  {['Rotary tools', 'Saws', 'Crimpers', 'Soldering'].map((skill) => (
                     <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
                   ))}
                 </div>
@@ -173,7 +174,7 @@ export default function Home() {
               <div>
                 <h3 className="text-white text-sm font-semibold mb-2">Software</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'C/C++', 'CMake', 'SQL', 'ESP32', 'Concurrency', 'RTOS,', 'Windows', 'Linux', 'Mac'].map((skill) => (
+                  {['C/C++', 'CMake', 'Python', 'SQL', 'Concurrency', 'RTOS,', 'Windows', 'Linux', 'Mac'].map((skill) => (
                     <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
                   ))}
                 </div>
@@ -181,7 +182,7 @@ export default function Home() {
               <div>
                 <h3 className="text-white text-sm font-semibold mb-2">Hardware</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['IMU Sensors', 'I²C', 'UART', 'PWM', 'Motors', 'Soldering'].map((skill) => (
+                  {['Reading Circuit/PCB Schematics', 'Multimeter Debugging', 'Arduino', 'ESP32', 'IMU Sensors', 'I²C', 'UART', 'PWM', 'Motors'].map((skill) => (
                     <span key={skill} className="px-2 py-1 rounded bg-surface border border-white/5 text-slate-300 text-xs font-medium cursor-default">{skill}</span>
                   ))}
                 </div>
