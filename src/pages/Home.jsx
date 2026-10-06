@@ -173,7 +173,7 @@ export default function Home() {
                 <h3 className="font-serif text-xl text-cream">Indoor Localization App</h3>
                 <div className="text-xs text-muted mb-2">Startup</div>
                 <p className="text-sm text-muted/90 leading-relaxed">
-                  Developed a mobile app combining pedometer and Bluetooth beacons. Built a Python (Flask) backend and implemented an Extended Kalman Filter for sensor fusion.
+                  Developed a mobile app combining pedometer and Bluetooth beacons. Built a Python (Flask) backend and implemented Kalman-filter-style corrections for sensor fusion.
                 </p>
                 <Link to="/projects" className="block text-xs text-blueprint hover:text-redline mt-2 w-fit">
                   → SEE SHEET 02 / P.03
@@ -202,6 +202,12 @@ export default function Home() {
                 <td className="py-3 pr-4 text-muted">Western University</td>
                 <td className="py-3 pr-4 text-muted">2019 — 2023</td>
                 <td className="py-3 text-redline text-xs">Dean's Honor List</td>
+              </tr>
+              <tr className="border-b border-blueprint/20">
+                <td className="py-3 pr-4 text-cream font-medium">Certificate, Programmable Logic Controllers</td>
+                <td className="py-3 pr-4 text-muted">Fanshawe College</td>
+                <td className="py-3 pr-4 text-muted">2026</td>
+                <td className="py-3 text-redline text-xs"></td>
               </tr>
             </tbody>
           </table>

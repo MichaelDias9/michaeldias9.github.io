@@ -23,10 +23,10 @@ const projects = [
     part: 'P.01',
     title: 'IMU Sensor Fusion',
     description:
-      'Developed a 9-DOF complementary filter using quaternions and C++ for high performance real-time attitude estimation and visualization using a RayLib front end. Wrote filter PID loops, and and integrated third-party libraries using CMake.',
+      'Developed a 9-DOF Mahony filter using quaternions and C++ for high performance real-time attitude estimation and visualization using a RayLib front end. Wrote filter PID loops, and and integrated third-party libraries using CMake.',
     tech: ['C++', 'C', 'CMake', 'RayLib'],
     github: 'https://github.com/MichaelDias9/IMU-Sensor-Fusion',
-    media: { type: 'gif', src: imuDemo, caption: 'REC — 9DOF COMPLEMENTARY FILTER, QUATERNION ATTITUDE' },
+    media: { type: 'gif', src: imuDemo, caption: 'REC — 9DOF MAHONY FILTER, QUATERNION ATTITUDE' },
   },
   {
     id: 3,
@@ -43,14 +43,14 @@ const projects = [
     part: 'P.03',
     title: 'Indoor Localization — Beacon Navigation',
     description:
-      'Developed a mobile app for GPS denied indoor navigation by combining pedometer data and a custom localization Bluetooth beacons. Built a Python (Flask) backend and implemented an Extended Kalman Filter for sensor fusion.',
-    tech: ['React Native', 'Python/Flask', 'Extended Kalman Filter'],
-    github: '#',
+      'Developed a mobile app for GPS denied indoor navigation by combining pedometer data and a custom localization Bluetooth beacons. Built a Python (Flask) backend and implemented Kalman-filter-style corrections for sensor fusion.',
+    tech: ['React Native', 'Python/Flask', 'Kalman Filtering'],
+    github: 'https://github.com/MichaelDias9/BLE-Localization-App',
     media: {
       type: 'video',
       device: 'iphone15pro',
       src: beaconDemo,
-      caption: 'REC — IMU/BLE FUSION, EXTENDED KALMAN FILTER',
+      caption: 'REC — IMU/BLE FUSION, KALMAN-STYLE CORRECTION',
     },
   },
   {
