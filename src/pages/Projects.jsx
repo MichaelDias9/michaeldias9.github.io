@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import imuDemo from '../assets/IMU-fusion-demo.gif';
 import beaconDemo from '../assets/beacon_navigation_demo.mp4';
+import droneFlight from '../assets/drone-flight.mp4';
+import dronePhoto from '../assets/drone-build.jpg';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -36,7 +38,12 @@ const projects = [
       'Selected and matched motor KV, 5" propellers, ESC ratings, and 4S-6S LiPo. Soldered high-current power systems and integrated the flight controller, receiver, and video system. Configured Betaflight firmware and performed PID tuning.',
     tech: ['Electronics', 'Soldering', 'Betaflight', 'PID Tuning'],
     github: '#',
-    media: { type: 'diagram', variant: 'drone', caption: 'FIG.02 — FRAME LAYOUT, 5" QUAD' },
+    media: {
+      type: 'video',
+      src: droneFlight,
+      still: { src: dronePhoto, alt: '5-inch FPV quadcopter held in hand' },
+      caption: 'REC — FPV FLIGHT, 5" QUAD / BETAFLIGHT',
+    },
   },
   {
     id: 4,
@@ -93,29 +100,6 @@ function DuctDiagram() {
   );
 }
 
-function DroneDiagram() {
-  const arms = [
-    [40, 30],
-    [260, 30],
-    [40, 140],
-    [260, 140],
-  ];
-  return (
-    <svg viewBox="0 0 300 170" className="w-full h-full">
-      <rect x="135" y="70" width="30" height="30" fill="none" stroke="#3A6EA5" strokeWidth="1" />
-      {arms.map(([cx, cy]) => (
-        <g key={`${cx}-${cy}`}>
-          <line x1="150" y1="85" x2={cx} y2={cy} stroke="#3A6EA5" strokeWidth="1" />
-          <circle cx={cx} cy={cy} r="14" fill="none" stroke="#D8542A" strokeWidth="1" />
-        </g>
-      ))}
-      <text x="16" y="20" fill="#c9c4b8" fontSize="9" fontFamily="'IBM Plex Mono', monospace">
-        FIG.02 — FRAME LAYOUT, 5" QUAD
-      </text>
-    </svg>
-  );
-}
-
 function PhoneFrame({ media }) {
   return (
     <div className="flex flex-col items-center gap-3 py-2">
@@ -156,6 +140,20 @@ function PhoneFrame({ media }) {
 }
 
 function MediaViewport({ media }) {
+  if (media.still) {
+    // flex-grow proportional to aspect ratio keeps both panes the same height
+    return (
+      <div className="flex gap-3">
+        <div style={{ flex: '1.7778 1 0' }}>
+          <MediaViewport media={{ ...media, still: undefined }} />
+        </div>
+        <div style={{ flex: '0.75 1 0' }} className="relative border border-blueprint/50 aspect-[3/4] bg-charcoal overflow-hidden">
+          <CornerTicks />
+          <img src={media.still.src} alt={media.still.alt} loading="lazy" className="w-full h-full object-cover" />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="relative border border-blueprint/50 aspect-video bg-charcoal overflow-hidden">
       <CornerTicks />
@@ -166,7 +164,6 @@ function MediaViewport({ media }) {
         </video>
       )}
       {media.type === 'diagram' && media.variant === 'duct' && <DuctDiagram />}
-      {media.type === 'diagram' && media.variant === 'drone' && <DroneDiagram />}
     </div>
   );
 }

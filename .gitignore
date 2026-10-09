@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Full-resolution media originals (web versions are committed alongside)
+src/assets/Drone-Flight-Video.mp4
+src/assets/Drone-Picture.HEIC
